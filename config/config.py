@@ -1,0 +1,2 @@
+LOGIN_EMAIL = 'ikykysa@gmail.com'
+LOGIN_PASSWORD = '88888888'
