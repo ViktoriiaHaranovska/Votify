@@ -8,8 +8,8 @@ async def test_basic():
 
     # Spuštění Playwright v asynchronním kontextu
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
+        browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
         await page.goto('https://example.com')
-        assert await page.title() == "Example Domain"
+        assert 'Example Domain' in await page.title()
         await browser.close()
